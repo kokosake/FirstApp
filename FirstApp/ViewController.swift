@@ -9,17 +9,30 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var uibutton: UIButton!
+    
+    let messageArray: [Any] = [
+        "May the force be with you",
+        "Live long and prosper",
+        "To infinity and beyond",
+        "Space is big. You just won't believe how vastly, hugely, mindbogglingly big it is"
+    ]
+    var i = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBAction func doButtonTap(_ sender: UIButton) {
+        print("Button Touched")
+        self.messageLabel.text = messageArray[i % messageArray.count]
+    }
+    
+    func updateUI(
 }
 
