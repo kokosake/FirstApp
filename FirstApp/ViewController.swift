@@ -32,7 +32,5 @@ class ViewController: UIViewController {
         print("Button Touched")
         self.messageLabel.text = messageArray[i % messageArray.count]
     }
-    
-    func updateUI(
 }
 
